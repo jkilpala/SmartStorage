@@ -1,2 +1,6 @@
 SmartStoragePi/SmartStoragePi/bin/
 SmartStoragePi/SmartStoragePi/obj/
+jksmartstorage_server/jksmartstorageService/bin/Microsoft.Azure.Mobile.Server.Home.dll
+jksmartstorage_server/jksmartstorageService/bin/
+jksmartstorage_server/packages/
+jksmartstorage_server/jksmartstorageService/obj/
