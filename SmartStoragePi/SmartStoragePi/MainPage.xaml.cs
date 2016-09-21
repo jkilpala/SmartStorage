@@ -74,7 +74,7 @@ namespace SmartStoragePi
             if (gpioAvailable == false)
             {
                 // If GPIO is not available, attempt to initialize it
-                //InitializeGpio();
+                InitializeGpio();
             }
 
             //// If user has set the DisableLiveCameraFeed within Constants.cs to true, disable the feed:
