@@ -53,4 +53,102 @@ namespace SmartStoragePi
         // The amount of time in seconds that the door will remain unlocked for
         public const int DoorLockOpenDurationSeconds = 10;
     }
+    public static class LightControlConstants
+    {
+        public static readonly bool[] PATH_TO_1_1 = {
+            true,                               //To the crossing
+            true,                               //Upp
+            true,                               //Upp 1
+            false,                               //Upp 2    
+            false,                               //Middle 1    
+            false,                               //Midle 2
+            false,                               //Down
+            false,                               //Down 1
+           // false                                //Down 2        
+        };
+
+        public static readonly bool[] PATH_TO_1_2 = {
+            true,                               //To the crossing
+            true,                               //Upp
+            true,                               //Upp 1
+            true,                               //Upp 2    
+            false,                               //Middle 1    
+            false,                               //Midle 2
+            false,                               //Down
+            false,                               //Down 1
+        //    false                                //Down 2        
+        };
+
+        public static readonly bool[] PATH_TO_2_1 = {
+            true,                               //To the crossing
+            false,                               //Upp
+            false,                               //Upp 1
+            false,                               //Upp 2    
+            true,                               //Middle 1    
+            false,                               //Midle 2
+            false,                               //Down
+            false,                               //Down 1
+       //     false                                //Down 2        
+        };
+
+        public static readonly bool[] PATH_TO_2_2 = {
+            true,                               //To the crossing
+            false,                               //Upp
+            false,                               //Upp 1
+            false,                               //Upp 2    
+            true,                               //Middle 1    
+            true,                               //Midle 2
+            false,                               //Down
+            false,                               //Down 1
+           // false                                //Down 2        
+        };
+
+        public static readonly bool[] PATH_TO_3_1 = {
+            true,                               //To the crossing
+            false,                               //Upp
+            false,                               //Upp 1
+            false,                               //Upp 2    
+            false,                               //Middle 1    
+            false,                               //Midle 2
+            true,                               //Down
+            true,                               //Down 1
+           // false                                //Down 2        
+        };
+
+        public static readonly bool[] PATH_TO_3_2 = {
+            true,                               //To the crossing
+            false,                               //Upp
+            false,                               //Upp 1
+            false,                               //Upp 2    
+            false,                               //Middle 1    
+            false,                               //Midle 2
+            true,                               //Down
+            true,                               //Down 1
+           // false                                //Down 2        
+        };
+
+        public static readonly bool[] ALL_OFF = {
+            false,                               //To the crossing
+            false,                               //Upp
+            false,                               //Upp 1
+            false,                               //Upp 2    
+            false,                               //Middle 1    
+            false,                               //Midle 2
+            false,                               //Down
+            false,                               //Down 1
+           // false                                //Down 2        
+        };
+
+        public static readonly bool[] ALL_ON = {
+            true,                               //To the crossing
+            true,                               //Upp
+            true,                               //Upp 1
+            true,                               //Upp 2    
+            true,                               //Middle 1    
+            true,                               //Midle 2
+            true,                               //Down
+            true,                               //Down 1
+          //  true                                //Down 2        
+        };
+    }
 }

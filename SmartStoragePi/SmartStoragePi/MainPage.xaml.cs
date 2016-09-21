@@ -52,7 +52,11 @@ namespace SmartStoragePi
         private bool doorbellJustPressed = false;
 
         // GUI Related Variables:
-        private double visitorIDPhotoGridMaxWidth = 0;
+        private double visitorIDPhotoGridMaxWidth = 0;        
+
+        //I2C Things
+        I2CLightHelper lightSystem;
+        private bool lightSystemAvailable;
 
         public MainPage()
         {
@@ -70,7 +74,7 @@ namespace SmartStoragePi
             if (gpioAvailable == false)
             {
                 // If GPIO is not available, attempt to initialize it
-                InitializeGpio();
+                //InitializeGpio();
             }
 
             //// If user has set the DisableLiveCameraFeed within Constants.cs to true, disable the feed:
@@ -84,6 +88,10 @@ namespace SmartStoragePi
             //    LiveFeedPanel.Visibility = Visibility.Visible;
             //    DisabledFeedGrid.Visibility = Visibility.Collapsed;
             //}
+            if (lightSystemAvailable == false)
+            {
+                InitializeLights();
+            }
         }
         /// <summary>
         /// Triggered every time the page is navigated to.
@@ -97,6 +105,16 @@ namespace SmartStoragePi
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public void InitializeLights()
+        {
+            lightSystem = new I2CLightHelper();
+            lightSystem.Init(0x64, 2000);
+            lightSystemAvailable = true;
+            DataContext = lightSystem;
+        }
         /// <summary>
         /// Called once, when the app is first opened. Initializes Oxford facial recognition.
         /// </summary>
@@ -342,6 +360,15 @@ namespace SmartStoragePi
 
             }
 
+        }
+        private void button_column_Click(object sender, RoutedEventArgs e)
+        {
+            lightSystem.TestScrollColumn();
+        }
+
+        private void button_row_Click(object sender, RoutedEventArgs e)
+        {
+            lightSystem.TestScrollRow();
         }
     }
 }

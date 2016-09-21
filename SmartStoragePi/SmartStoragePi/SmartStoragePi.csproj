@@ -104,6 +104,7 @@
     <Compile Include="FacialRecognition\HSPerson.cs" />
     <Compile Include="FacialRecognition\IFaceRecognizer.cs" />
     <Compile Include="Helpers\GpioHelper.cs" />
+    <Compile Include="Helpers\I2CLightHelper.cs" />
     <Compile Include="Helpers\OxfordFaceAPIHelper.cs" />
     <Compile Include="Helpers\SpeechHelper.cs" />
     <Compile Include="Helpers\WebcamHelper.cs" />
@@ -112,6 +113,7 @@
     </Compile>
     <Compile Include="Objects\Visitor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
